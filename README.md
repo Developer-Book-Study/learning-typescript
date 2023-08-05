@@ -21,10 +21,10 @@
 
 ## 📚 Github Rules
 
-- 각 챕터 별 directory에 해당 챕터 내용을 정리한다. (파일명 예시: `Chapter_01_Hansol.md`)
-- Repository를 fork 한 뒤 매주 본인이 맡은 아이템 내용 정리 후 learning-typescript Repository로 Pull Request를 생성한다.
-- Pull Request 제목 형식은 `[Hansol] Chapter 01 정리` 로 한다.
-- 담당 챕터가 아닌 내용을 정리하는 것은 자유이다.
+- Repository를 fork 한 뒤 Local에 clone 받고 Branch를 생성한다. (브랜치명 예시: `Hansol-Chapter-01`)
+- 각 챕터 별 directory에 매주 본인이 맡은 챕터 내용을 정리한다. (파일명 예시: `Chapter_01_Hansol.md`)
+- 완료 후 commit 하고 push 한다. (커밋명 예시: `Add Chapter 01 Hansol`, `Update Chapter 01 Hansol`)
+- `developer-book-study/learning-typescript` Repository로 Pull Request를 생성한다. (PR 제목 예시: `[Hansol] Chapter 01 정리`)
 
 ## ⚡️ Members
 
