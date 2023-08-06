@@ -33,23 +33,23 @@ JavaScript는 이러한 문제를 사전에 막아주지 못한다. 사전에 �
 TypeScript의 기본 데이터 타입으로, JavaScript와 거의 동일한 데이터 타입을 지원한다. 
 
 
-<Number>
+#### Number
 
 숫자 타입으로, 정수와 실수를 포함한다.
 
-<String>
+#### String
 
 문자열 타입이다.
 
-<Boolean>
+#### Boolean
 
 참(true)과 거짓(false)을 나타내는 불리언 타입이다.
 
-<Null>
+#### Null
 
 값이 없음을 나타내는 타입이다.
 
-<Undefined>
+#### Undefined
 
 값이 할당되지 않은 변수의 기본값인 타입이다.
 
@@ -58,15 +58,15 @@ TypeScript의 기본 데이터 타입으로, JavaScript와 거의 동일한 데�
 
 
 ## 객체 타입
-<Object>
+#### Object
 
 객체를 나타내는 타입이다.
 
-<Array>
+#### Array
 
 동일한 타입의 요소를 가진 배열을 나타내는 타입이다.
 
-<Tuple>
+#### Tuple
 
 각 요소가 다른 타입을 가질 수 있는 배열을 나타내는 타입이다.
 요소들의 타입이 모두 같을 필요는 없으며, 타입이 Tuple로 정의된 배열은 반드시 동일한 순서와 길이를 따라야 한다.
@@ -76,9 +76,10 @@ TypeScript의 기본 데이터 타입으로, JavaScript와 거의 동일한 데�
 
 
 ## 특수 타입
-<Enum>
+#### Enum
 값의 집합에 더 나은 이름을 붙여줄 수 있는 데이터 타입이다. 
 예를들어 한국어, 영어, 일본어, 중국어 중 한 언어를 제공하는 제품이 있다고 가정해보자.
+
 
 const productLanguage: 'kr' | 'en' | 'jp' | 'zh' = 'en'; 
 
@@ -98,20 +99,20 @@ enum Language {
 const productLanguage: Language = Language.english // enum은 객체이므로 이렇게 접근해서 사용할 수 있다.
 
 
-<Unknown>
+#### Unknown
 
 타입을 미리 알 수 없는 경우에 사용되는 타입이다.
 Any 타입과 거의 유사하지만 컴파일에서 타입 에러를 걸러 낼 수 있다는 차이점이 있다. 
 
-<Any>
+#### Any
 모든 타입을 허용하게 하는 타입으로, TypeScript를 무효화 시키는 타입과 동일하여 최대한 사용을 자제하는것이 좋다.
 
-<Void>
+#### Void
 
 주로 아무것도 return 하지않는 함수의 타입을 지정할 때 사용한다.
 Any 타입의 반대 타입으로 보통 함수에서 return 값이 없을 때 주로 사용한다.
 
-<Never>
+#### Never
 
 절대 발생하지 않는 값의 타입을 나타낸다. 
 예로 함수가 항상 예외를 발생시키거나 무한 루프를 실행할 때 이 타입을 사용할 수 있다.
@@ -120,7 +121,7 @@ Any 타입의 반대 타입으로 보통 함수에서 return 값이 없을 때 �
 
 
 
-<Optional Type>
+#### Optional Type
 
 함수의 타입을 지정할 때 특정한 키를 nullable하게 지정할 수 있다. 즉 옵셔널은 undefined를 허용할수도 안할수도 있게 하는것이다.
 사용법은 아래와 같이 변수 이름 옆에 ?를 붙이면 된다.
@@ -134,7 +135,7 @@ const User : {
 
 
 
-<Union Type>
+#### Union Type
 
 데이터의 타입이 A이거나 B일 수 있다면 이는 Union Type이다.
 
@@ -145,7 +146,8 @@ const User : {
 
 
 
-<Literal Type>
+
+#### Literal Type
 
 원시 타입 중 어떠한 것이 아닌 내가 지정한 특정 원싯값으로 알려진 타입이다.
 
@@ -203,7 +205,7 @@ let User = 'Han';
 
 
 
-* TypeScript에서는 함수의 return 타입도 지정해 줄 수 있다. 
+## TypeScript에서는 함수의 return 타입도 지정해 줄 수 있다. 
 
 함수의 return 타입 지정
 
@@ -219,7 +221,7 @@ function add(a,b) : number{
 
 
 
-* 함수의 축약 선언
+### 함수의 축약 선언
 
 축약 가능한 함수라면 아래와 같은 방법으로도 쓸 수 있다.
 
