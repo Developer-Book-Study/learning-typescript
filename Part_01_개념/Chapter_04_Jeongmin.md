@@ -57,7 +57,8 @@ poetLater = {
 
 ### 선택적 속성
 
-타입의 속성 애너테이션에서 : 앞에 ?를 추가하여 선택적 속성임을 나타낼 수 있음.
+타입의 속성 애너테이션에서 : 앞에 ?를 추가하여 선택적 속성임을 나타낼 수 있음.\
+? 붙이면 undefined를 허용한다. 없으면 허용하지 않는다! 라는 의미
 
 ```
 type Book = {
@@ -73,6 +74,11 @@ const ok: Book = {
 const ok2: Book = {
     pages: 40
 }
+
+// error
+cosnt ok3: Book = {
+    author: "abc"
+}
 ```
 
 <br><br>
@@ -82,7 +88,7 @@ const ok2: Book = {
 ### 유추된 객체 타입 유니언
 
 ```
-const poem = Math.randoe() > 0.5
+const poem = Math.random() > 0.5
     ? { name : "The Double Image", pages: 7 }
     : { name : "Her Kind", rhymes: true };
 
@@ -159,6 +165,13 @@ type WrittenArt = Artwork & Writing
 //    pages: number
 // }
 
+
+type WrittenArt = {
+    genre: string;
+    name: string;
+    pages: number
+}
+
 ```
 
 ### never
@@ -166,10 +179,11 @@ type WrittenArt = Artwork & Writing
 never 키워드로 작성하면 never 타입이 됨.
 
 ```
-type NotPossible = number & number
+type NotPossible = number & string
 
 let notNumber: NotPossible = 0; // error
 let notString: never = "" // error
+
 ```
 
 never 키워드와 never타입은 bottom 타입 또는 empty 타입을 의미\
